@@ -1,0 +1,49 @@
+{
+  "name": "npms-api",
+  "version": "0.1.0",
+  "description": "npms.io API",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint '{*.js,lib/**/*.js,test/**/*.js}' --ignore-pattern=test/coverage",
+    "test": "mocha",
+    "test-cov": "istanbul cover --dir test/coverage _mocha -- --bail && echo Coverage lies in test/coverage/lcov-report/index.html",
+    "test-travis": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --bail && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "bugs": {
+    "url": "https://github.com/npms-io/npms-api/issues/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/npms-io/npms-api.git"
+  },
+  "keywords": [
+    "npm",
+    "npms",
+    "npmsearch",
+    "npmsearch",
+    "search",
+    "node",
+    "module",
+    "package"
+  ],
+  "author": "André Duarte <hi@andreduarte.io> (http://andreduarte.io)",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "koa": "^1.2.0",
+    "koa-compress": "^1.0.9",
+    "koa-logger": "^1.3.0",
+    "koa-response-time": "^1.0.2",
+    "koa-route": "^2.4.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "bin": {
+    "npms-api": "./index.js"
+  },
+  "devDependencies": {
+    "@satazor/eslint-config": "^2.1.3",
+    "eslint": "^2.3.0"
+  }
+}
