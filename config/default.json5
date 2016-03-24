@@ -1,4 +1,5 @@
 {
+    elasticSearch: {},
     search: {
         size: 15,
         effect: 7.5,
