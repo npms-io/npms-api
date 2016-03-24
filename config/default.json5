@@ -1,0 +1,11 @@
+{
+    search: {
+        size: 15,
+        effect: 7.5,
+        weights: {
+            quality: 0.27,
+            popularity: 0.45,
+            maintenance: 0.28,
+        }
+    }
+}
