@@ -4,5 +4,9 @@
     "@satazor/eslint-config/es6",
     "@satazor/eslint-config/addons/node",
     "@satazor/eslint-config/addons/node-v4-es6"
-  ]
+  ],
+  "rules": {
+    "no-invalid-this": 0,
+    "require-yield": 0
+  }
 }
