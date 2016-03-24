@@ -4,6 +4,8 @@
   "description": "npms.io API",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "start-dev": "nodemon index.js",
     "lint": "eslint '{*.js,lib/**/*.js,test/**/*.js}' --ignore-pattern=test/coverage",
     "test": "mocha",
     "test-cov": "istanbul cover --dir test/coverage _mocha -- --bail && echo Coverage lies in test/coverage/lcov-report/index.html",
