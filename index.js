@@ -1,4 +1,6 @@
 #!/usr/bin/env node
 'use strict';
 
-require('./cli/serve')(process.argv[2]);
+const app = require('../lib/bootstrap')();
+
+app.listen(process.argv[2] || 3000);
