@@ -1,0 +1,24 @@
+// This is the pm2 configuration file for npms-api
+{
+    apps: [
+        {
+            name: 'npms-api',
+            script: './index.js',
+            instances: 1,
+            log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+            env : { NODE_ENV: 'production' },
+        },
+    ],
+    deploy: {
+        production: {
+            user: 'api',
+            host: '212.47.226.136',
+            ref: 'origin/master',
+            repo: 'https://github.com/npms-io/npms-api.git',
+            path: '/home/www/npms-api',
+            'post-deploy': '\
+npm install --production && \
+pm2 startOrRestart ecosystem.json5 --env production',
+        },
+    },
+}
