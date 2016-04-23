@@ -11,7 +11,7 @@
     ],
     deploy: {
         production: {
-            user: 'api',
+            user: 'www',
             host: '212.47.226.136',
             ref: 'origin/master',
             repo: 'https://github.com/npms-io/npms-api.git',
