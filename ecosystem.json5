@@ -18,7 +18,7 @@
             path: '/home/www/npms-api',
             'post-deploy': '\
 cp ../local.json5 ./config/ && \
-npm install --loglevel http --production && \
+npm update --loglevel http --production && \
 pm2 startOrRestart ecosystem.json5 --env production',
         },
     },
