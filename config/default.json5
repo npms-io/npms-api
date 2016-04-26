@@ -4,7 +4,7 @@
     },
     search: {
         size: 15,
-        effect: 7.5,
+        effect: 15.3,
         weights: {
             quality: 0.27,
             popularity: 0.45,
