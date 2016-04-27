@@ -10,16 +10,15 @@ const searchError = require('./util/searchError');
 
 
 describe('search', () => {
-    it('should answer to requests with "total" and "results"', (done) => {
-        request
-            .get('/search/')
+    it('should answer to requests with "total" and "results"', () => {
+        return request
+            .get('/search')
             .query({ term: 'express' })
             .expect(200)
             .then((res) => {
                 expect(res.body.total).to.be.a('number');
                 expect(res.body.results).to.be.instanceof(Array).with.length.above(0);
-            })
-            .then(done);
+            });
     });
 
     it('"test" should show "mocha", "chai" & "jasmine-core" first', () => {
@@ -29,8 +28,8 @@ describe('search', () => {
             chai: 0,
         };
 
-        request
-            .get('/search/')
+        return request
+            .get('/search')
             .query({ term: 'test', size: 10 })
             .expect(200)
             .then((res) => {
