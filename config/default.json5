@@ -9,9 +9,9 @@
         size: 15,
         effect: 15.3,
         weights: {
-            quality: 0.27,
-            popularity: 0.45,
-            maintenance: 0.28,
+            quality: 0.33,
+            popularity: 0.34,
+            maintenance: 0.33,
         }
     }
 }
