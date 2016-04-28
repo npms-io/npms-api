@@ -1,6 +1,9 @@
 {
-    elasticSearch: {
+    elasticsearch: {
         index: 'npms-read',
+        requestTimeout: 15000,
+        apiVersion: '2.3',
+        log: null,
     },
     search: {
         size: 15,
