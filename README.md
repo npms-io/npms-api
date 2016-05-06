@@ -21,8 +21,6 @@ There's a separate document that explains the deployment procedure, you may read
 
 ## Tests
 
-Before running the tests, you must have read through the setup guide.
-
 ```bash
 $ npm test
 $ npm test-cov # to get coverage report
