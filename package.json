@@ -32,7 +32,7 @@
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.3.4",
-    "config": "^1.19.0",
+    "config": "^1.20.3",
     "elasticsearch": "^11.0.1",
     "koa": "^1.2.0",
     "koa-joi-router": "^3.0.0",
