@@ -52,7 +52,7 @@
     "coveralls": "^2.11.6",
     "eslint": "^2.10.2",
     "istanbul": "^0.4.2",
-    "mocha": "^2.4.5",
+    "mocha": "^2.5.2",
     "nodemon": "^1.9.1",
     "supertest-as-promised": "^3.1.0"
   }
