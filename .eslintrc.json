@@ -8,5 +8,8 @@
   "rules": {
     "no-invalid-this": 0,
     "require-yield": 0
+  },
+  "globals": {
+      "logger": false
   }
 }

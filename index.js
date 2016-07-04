@@ -1,6 +1,30 @@
-#!/usr/bin/env node
 'use strict';
 
-const app = require('./lib/app')();
+require('./lib/configure');
 
-app.listen(process.argv[2] || 3000);
+const koa = require('koa');
+const koaPino = require('koa-pino-logger');
+const responseTime = require('koa-response-time');
+const error = require('./lib/middleware/error');
+const notFound = require('./lib/middleware/not-found');
+const routes = require('./lib/routes');
+
+const log = logger.child({ module: 'index' });
+
+module.exports = (npmsNano, esClient) => {
+    const app = koa();
+
+    // Middleware
+    app.use(responseTime());
+    app.use(error());
+    app.use(notFound());
+    app.use(koaPino({ name: 'npms-api', level: logger.level }));
+
+    // Routes
+    app.use(routes(npmsNano, esClient));
+
+    // Log errors
+    app.on('error', (err) => log.error({ err }, err.message));
+
+    return app;
+};

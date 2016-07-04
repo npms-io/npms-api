@@ -1,17 +1,21 @@
 {
+    couchdbNpms: {
+        address: 'http://admin:admin@127.0.0.1:5984/npms',
+        options: {
+            timeout: 15000,
+        }
+    },
+
     elasticsearch: {
-        index: 'npms-read',
+        host: 'http://127.0.0.1:9200',
         requestTimeout: 15000,
         apiVersion: '2.3',
         log: null,
     },
-    search: {
-        size: 15,
-        effect: 15.3,
-        weights: {
-            quality: 0.27,
-            popularity: 0.45,
-            maintenance: 0.28,
-        }
+
+    listen: {
+        hostname: '127.0.0.1',
+        port: 3000,
+        backlog: null,
     }
 }

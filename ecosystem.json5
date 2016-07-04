@@ -3,9 +3,8 @@
     apps: [
         {
             name: 'npms-api',
-            script: './index.js',
-            instances: 1,
-            log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+            script: './server.js',
+            instances: 3,
             env : { NODE_ENV: 'production' },
         },
     ],
