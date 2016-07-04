@@ -24,7 +24,7 @@ There's a separate document that explains the deployment procedure, you may read
 
 ## Documentation
 
-You may update the documentation by running `$ npm run doc and open docs/apidoc/index.html`.
+You may update the documentation by running `$ npm run doc` and previewing `docs/apidoc/index.html` in your browser.
 
 To push any changes in the documentation run `$ npm run doc-push`.
 
