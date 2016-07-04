@@ -1,7 +1,7 @@
 {
   "name": "npms-api",
   "version": "1.0.0",
-  "description": "The http://npms.io API.",
+  "description": "The https://npms.io API.",
   "apidoc": {
     "url" : "https://api.npms.io"
     },
