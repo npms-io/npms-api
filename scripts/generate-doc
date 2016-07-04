@@ -25,6 +25,9 @@ git init
 git remote add origin git@github.com:npms-io/npms-api.git
 git checkout -B gh-pages
 
+# Add CNAME
+echo "api-docs.npms.io" > CNAME
+
 # Commit & push
 git add .
 git commit -m "API updated" > /dev/null
