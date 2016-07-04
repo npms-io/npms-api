@@ -7,8 +7,8 @@
     "start": "node server.js",
     "start-dev": "nodemon --watch server.js --watch index.js --watch lib --watch config --ext js,json5 server.js --log-level debug",
     "lint": "eslint '{*.js,lib/**/*.js,test/**/*.js}' --ignore-pattern=test/coverage",
-    "doc": "scripts/generate-doc",
-    "doc-push": "scripts/generate-doc --push",
+    "docs": "scripts/generate-doc",
+    "docs-push": "scripts/generate-doc --push",
     "test": "mocha",
     "test-cov": "istanbul cover --dir test/coverage _mocha -- --bail && echo Coverage lies in test/coverage/lcov-report/index.html",
     "test-travis": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --bail && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
