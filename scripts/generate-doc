@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Generate doc
+./node_modules/.bin/apidoc -i lib/routes -o docs/apidoc
+
+if [ "$1" != "--push" ]; then
+   exit 0;
+fi
+
+# Remove previous git repo in the folder
+cd docs/apidoc
+rm -rf .git
+
+# Setup a fresh git repo pointing to gh-pages
+git init
+git remote add origin git@github.com:npms-io/npms-api.git
+git checkout -B gh-pages
+
+# Commit & push
+git add .
+git commit -m "API updated"
+git push origin gh-pages -fq

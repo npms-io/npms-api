@@ -4,6 +4,9 @@
 
 The http://npms.io API.
 
+You may read the API documentation in https://api-docs.npms.io.
+
+
 ## Installation
 
 `$ npm install`
@@ -17,6 +20,13 @@ Simply spawn the server by running `$ npm run start-dev`.
 ## Deploys
 
 There's a separate document that explains the deployment procedure, you may read it [here](./docs/deploys.md).
+
+
+## Documentation
+
+You may update the documentation by running `$ npm run doc and open docs/apidoc/index.html`.
+
+To push any changes in the documentation run `$ npm run doc-push`.
 
 
 ## Tests
