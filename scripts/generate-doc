@@ -8,7 +8,9 @@ echo '---------------------------------------------'
 
 # Exit early if --push was not specified
 if [ "$1" != "--push" ]; then
-   exit 0;
+    echo ''
+    echo 'You may view the documention by opening ./docs/apidoc/index.html'
+    exit 0
 fi
 
 echo ''
