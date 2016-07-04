@@ -1,11 +1,20 @@
 #!/bin/bash
 
 # Generate doc
+echo '> Generating doc'
+echo '---------------------------------------------'
+
 ./node_modules/.bin/apidoc -i lib/routes -o docs/apidoc
 
+# Exit early if --push was not specified
 if [ "$1" != "--push" ]; then
    exit 0;
 fi
+
+echo ''
+echo ''
+echo '> Pushing changes to gh-pages'
+echo '---------------------------------------------'
 
 # Remove previous git repo in the folder
 cd docs/apidoc
@@ -18,5 +27,8 @@ git checkout -B gh-pages
 
 # Commit & push
 git add .
-git commit -m "API updated"
-git push origin gh-pages -fq
+git commit -m "API updated" > /dev/null
+git push origin gh-pages -f
+
+# Delete created repo
+rm -rf .git
