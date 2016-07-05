@@ -57,7 +57,7 @@ const elasticsearch = require('elasticsearch');
 const nano = require('nano');
 const api = require('./');
 
-const npmsNano = Promise.promisifyAll(nano(config.get('couchdbNpms.address'), config.get('couchdbNpms.options')));
+const npmsNano = Promise.promisifyAll(nano(config.get('couchdbNpms')));
 const esClient = new elasticsearch.Client(config.get('elasticsearch'));
 const log = logger.child({ module: 'server' });
 
