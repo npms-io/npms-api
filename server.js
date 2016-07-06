@@ -34,7 +34,7 @@ const argv = yargs
 })
 .option('log-level', {
     type: 'string',
-    default: 'info',
+    default: 'warn',
     alias: 'll',
     describe: 'The log level to use (fatal, error, warn, info, debug, trace)',
 })
