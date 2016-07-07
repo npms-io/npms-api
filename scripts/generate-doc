@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Generate doc
+echo '> Generating doc'
+echo '---------------------------------------------'
+
+./node_modules/.bin/apidoc -i lib/routes -o docs/apidoc
+
+# Exit early if --push was not specified
+if [ "$1" != "--push" ]; then
+    echo ''
+    echo 'You may view the documention by opening ./docs/apidoc/index.html'
+    exit 0
+fi
+
+echo ''
+echo ''
+echo '> Pushing changes to gh-pages'
+echo '---------------------------------------------'
+
+# Remove previous git repo in the folder
+cd docs/apidoc
+rm -rf .git
+
+# Setup a fresh git repo pointing to gh-pages
+git init
+git remote add origin git@github.com:npms-io/npms-api.git
+git checkout -B gh-pages
+
+# Add CNAME
+echo "api-docs.npms.io" > CNAME
+
+# Commit & push
+git add .
+git commit -m "API updated" > /dev/null
+git push origin gh-pages -f
+
+# Delete created repo
+rm -rf .git

@@ -2,7 +2,10 @@
 
 [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
-The http://npms.io API.
+The https://npms.io API.
+
+You may read the API documentation in https://api-docs.npms.io.
+
 
 ## Installation
 
@@ -17,6 +20,13 @@ Simply spawn the server by running `$ npm run start-dev`.
 ## Deploys
 
 There's a separate document that explains the deployment procedure, you may read it [here](./docs/deploys.md).
+
+
+## Documentation
+
+You may update the API REST documentation by running `$ npm run docs` and previewing `docs/apidoc/index.html` in your browser.
+
+To push any changes in the documentation run `$ npm run docs-push`.
 
 
 ## Tests
