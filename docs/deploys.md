@@ -33,8 +33,6 @@ server {
   listen *:80;
   server_name api.npms.io;
 
-  include h5bp/basic.conf;
-
   add_header "Access-Control-Allow-Origin" "https://npms.io";
 
   location / {
