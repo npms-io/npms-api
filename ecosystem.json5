@@ -6,7 +6,7 @@
             script: './server.js',
             instances: 3,
             env : { NODE_ENV: 'production' },
-            max_memory_restart: '1500MB'
+            max_memory_restart: '1500M'
         },
     ],
     deploy: {
