@@ -64,6 +64,6 @@
     "istanbul": "^0.4.2",
     "mocha": "^3.0.1",
     "nodemon": "^1.9.1",
-    "supertest-as-promised": "^3.1.0"
+    "supertest-as-promised": "^4.0.0"
   }
 }
