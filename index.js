@@ -9,10 +9,9 @@ const error = require('./lib/middleware/error');
 const notFound = require('./lib/middleware/not-found');
 const routes = require('./lib/routes');
 
-const log = logger.child({ module: 'index' });
-
 module.exports = (npmsNano, esClient) => {
     const app = koa();
+    const log = logger.child({ module: 'index' });
 
     // Middleware
     app.use(responseTime());
