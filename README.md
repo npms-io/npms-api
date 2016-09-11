@@ -7,11 +7,6 @@ The https://npms.io API.
 You may read the API documentation in https://api-docs.npms.io.
 
 
-## Installation
-
-`$ npm install`
-
-
 ## Development
 
 Simply spawn the server by running `$ npm run start-dev`.
