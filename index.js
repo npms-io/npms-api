@@ -18,7 +18,7 @@ module.exports = (npmsNano, esClient) => {
     app.use(responseTime());
     app.use(error());
     app.use(notFound());
-    app.use(koaPino({ name: 'npms-api', level: logger.level }));
+    app.use(koaPino({ name: 'npms-api', level: logger.level, serializers: logger.serializers }));
 
     // Routes
     app.use(routes(npmsNano, esClient));
