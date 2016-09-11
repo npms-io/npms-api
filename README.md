@@ -1,15 +1,10 @@
 # npms-api
 
-[![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
+[![Build status][travis-image]][travis-url] [![Coverage status][coveralls-image]][coveralls-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev dependency status][david-dm-dev-image]][david-dm-dev-url]
 
 The https://npms.io API.
 
 You may read the API documentation in https://api-docs.npms.io.
-
-
-## Installation
-
-`$ npm install`
 
 
 ## Development
