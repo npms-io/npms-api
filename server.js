@@ -61,7 +61,7 @@ const npmsNano = Promise.promisifyAll(nano(config.get('couchdbNpms')));
 const esClient = new elasticsearch.Client(config.get('elasticsearch'));
 const log = logger.child({ module: 'server' });
 
-api(npmsNano, esClient)
+api(config.get('app'), npmsNano, esClient)
 .listen(argv.port, argv.hostname, argv.backlog, (err) => {
     if (err) {
         log.error({ err }, 'Unable to start server');
