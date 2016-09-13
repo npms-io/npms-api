@@ -5,11 +5,12 @@ require('./lib/configure');
 const koa = require('koa');
 const koaPino = require('koa-pino-logger');
 const responseTime = require('koa-response-time');
+const gaPageview = require('koa-ga-pageview');
 const error = require('./lib/middleware/error');
 const notFound = require('./lib/middleware/not-found');
 const routes = require('./lib/routes');
 
-module.exports = (npmsNano, esClient) => {
+module.exports = (config, npmsNano, esClient) => {
     const app = koa();
     const log = logger.child({ module: 'index' });
 
@@ -18,6 +19,7 @@ module.exports = (npmsNano, esClient) => {
     app.use(error());
     app.use(notFound());
     app.use(koaPino({ name: 'npms-api', level: logger.level, serializers: logger.serializers }));
+    config.googleAnalyticsId && app.use(gaPageview(config.googleAnalyticsId, '_ga'));
 
     // Routes
     app.use(routes(npmsNano, esClient));

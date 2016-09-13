@@ -16,5 +16,10 @@
         hostname: '127.0.0.1',
         port: 3000,
         backlog: null,
+    },
+
+    // App config that will be passed to index.js
+    app: {
+        googleAnalyticsId: null
     }
 }
