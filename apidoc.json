@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "description": "The https://npms.io API.",
   "apidoc": {
-    "url" : "https://api.npms.io"
+    "url" : "https://api.npms.io/v1"
   }
 }
