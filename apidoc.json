@@ -1,8 +1,11 @@
 {
   "name": "npms-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The https://npms.io API.",
   "apidoc": {
     "url" : "https://api.npms.io"
+  },
+  "template": {
+     "withCompare": false
   }
 }
