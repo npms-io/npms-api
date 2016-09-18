@@ -4,8 +4,5 @@
   "description": "The https://npms.io API.",
   "apidoc": {
     "url" : "https://api.npms.io"
-  },
-  "template": {
-    "withCompare": false
   }
 }
