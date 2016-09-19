@@ -1,6 +1,6 @@
 {
   "name": "npms-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "npms.io API",
   "main": "index.js",
   "scripts": {
@@ -48,6 +48,7 @@
     "normalize-number": "^1.0.3",
     "pino": "^2.7.2",
     "require-directory": "^2.1.1",
+    "search-query-parser": "^1.0.0",
     "validate-npm-package-name": "^2.2.2",
     "yargs": "^5.0.0"
   },
@@ -59,6 +60,7 @@
   },
   "devDependencies": {
     "@satazor/eslint-config": "^3.0.0",
+    "apidoc": "^0.16.1",
     "coveralls": "^2.11.6",
     "eslint": "^3.0.0",
     "istanbul": "^0.4.2",
