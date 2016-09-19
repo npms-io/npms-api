@@ -4,8 +4,8 @@
 # v2.0.0 - 2016-09-19
 
 - Changed `?term` to `?q` in `/search`, which now supports [qualifiers](https://api-docs.npms.io/#api-search-query) to filter and modify results
+- Changed `?term` to `?q` in `/search/suggestions`
 - Removed `scoreEffect`, `qualityWeight`, `maintenanceWeight` and `popularityWeight` query parameters from `/search` in favor of qualifiers
-- Changed `?term` to `?text` in `/search/suggestions`
 - Changed `/module` to `/package`
 - Changed `module` to `package` in every response
 - Added `flags` to the search & suggestions responses
