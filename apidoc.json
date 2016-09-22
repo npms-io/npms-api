@@ -2,10 +2,14 @@
   "name": "npms-api",
   "version": "2.0.0",
   "description": "The https://npms.io API.",
-  "apidoc": {
-    "url" : "https://api.npms.io/v2"
-  },
+  "title": "npms.io API",
+  "url" : "https://api.npms.io/v2",
+  "order": ["ExecuteSearchQuery", "Search", "Package"],
   "template": {
      "withCompare": false
-  }
+ },
+ "header": {
+   "title": "Introduction",
+   "filename": "docs/apidoc-includes/header.md"
+ }
 }
