@@ -2,7 +2,7 @@
     // Databases & similar stuff
     couchdbNpms: {
         url: 'http://admin:admin@127.0.0.1:5984/npms',
-        requestDefaults: { timeout: 15000 }
+        requestDefaults: { timeout: 15000 },
     },
     elasticsearch: {
         host: 'http://127.0.0.1:9200',
@@ -20,6 +20,6 @@
 
     // App config that will be passed to index.js
     app: {
-        googleAnalyticsId: null
+        googleAnalyticsId: null,
     }
 }
