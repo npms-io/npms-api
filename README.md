@@ -6,9 +6,9 @@ The https://npms.io API.
 
 You may read the API documentation in https://api-docs.npms.io.
 
-The API is available under `https://api.npms.io/<version>`, where `version` may be:
-- `v2` (current)
-- `v1` (deprecated, will become unavailable on `2016-12-19`
+The API is available under `https://api.npms.io/v<version>`, where `version` may be:
+- `2` (current)
+- `1` (deprecated, will become unavailable on `2016-12-19`
 
 
 ## Development
