@@ -4,7 +4,7 @@
 # v2.1.0 - 2016-09-25
 
 - Added `collected.metadata.hasSelectiveFiles` to `/package/<package>` response to indicate if a package has `files` specified in its `package.json`.
-- Removed all falsy values to `/package/<package>` response.
+- Removed all falsy values from `/package/<package>` response.
 
 
 # v2.0.0 - 2016-09-19
