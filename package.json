@@ -50,7 +50,7 @@
     "require-directory": "^2.1.1",
     "search-query-parser": "^1.0.0",
     "validate-npm-package-name": "^2.2.2",
-    "yargs": "^5.0.0"
+    "yargs": "^6.0.0"
   },
   "engines": {
     "node": ">=4.0.0"
