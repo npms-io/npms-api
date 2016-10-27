@@ -36,7 +36,7 @@
     "bluebird": "^3.3.4",
     "config": "^1.19.0",
     "deep-compact": "^1.0.2",
-    "elasticsearch": "^11.0.1",
+    "elasticsearch": "^12.0.0",
     "joi": "^9.0.0",
     "koa": "^1.2.0",
     "koa-bodyparser": "^2.2.0",
