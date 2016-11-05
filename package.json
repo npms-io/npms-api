@@ -33,9 +33,9 @@
   "author": "André Duarte <hi@andreduarte.io> (http://andreduarte.io)",
   "license": "MIT",
   "dependencies": {
+    "@npms/queries": "^1.0.1",
     "bluebird": "^3.3.4",
     "config": "^1.19.0",
-    "deep-compact": "^1.0.2",
     "elasticsearch": "^12.0.1",
     "joi": "^9.0.0",
     "koa": "^1.2.0",
@@ -46,10 +46,8 @@
     "koa-router": "^5.4.0",
     "lodash": "^4.12.0",
     "nano": "^6.2.0",
-    "normalize-number": "^1.0.3",
     "pino": "^2.7.2",
     "require-directory": "^2.1.1",
-    "search-query-parser": "^1.0.0",
     "validate-npm-package-name": "^2.2.2",
     "yargs": "^6.0.0"
   },
