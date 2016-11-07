@@ -1,6 +1,11 @@
 # Changelog
 
 
+# v2.2.0 - 2016-11-07
+
+- Added `error` to `/package/<package>` response to indicate if a package analysis has failed
+
+
 # v2.1.0 - 2016-09-25
 
 - Added `collected.metadata.hasSelectiveFiles` to `/package/<package>` response to indicate if a package has `files` specified in its `package.json`.
