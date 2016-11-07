@@ -4,7 +4,15 @@
 echo '> Generating doc'
 echo '---------------------------------------------'
 
+rm -rf docs/apidoc/
 ./node_modules/.bin/apidoc -i lib/routes -o docs/apidoc
+
+# Need to rename vendor folder to something else due to restrictions in gh-pages
+# See: http://stackoverflow.com/questions/4247068/sed-command-with-i-option-failing-on-mac-but-works-on-linux
+mv docs/apidoc/vendor docs/apidoc/lib
+sed -i.bak "s/vendor\//lib\//g" docs/apidoc/index.html
+sed -i.bak "s/vendor\//lib\//g" docs/apidoc/main.js
+rm -f docs/apidoc/*.bak
 
 # Exit early if --push was not specified
 if [ "$1" != "--push" ]; then
