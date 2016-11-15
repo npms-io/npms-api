@@ -45,6 +45,7 @@
     "lodash": "^4.12.0",
     "nano": "^6.2.0",
     "pino": "^2.7.2",
+    "pino-err-serializer": "^1.0.1",
     "require-directory": "^2.1.1",
     "validate-npm-package-name": "^2.2.2",
     "yargs": "^6.0.0"
