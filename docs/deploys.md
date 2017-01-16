@@ -17,6 +17,78 @@ Before doing the first deploy, you need to setup the server. All commands execut
 - Setup pm2 to run at start by running `$ sudo pm2 startup -u www --hp "/home/www"` on the server
 - Finally run `$ pm2 save` to store the running processes
 
+### Nginx
+
+- Install nginx in the server by running `$ sudo aptitude install nginx`
+- Setup a new site called `api` in `/etc/nginx/sites-available` with the config exemplified below
+- Finally restart nginx by running `$ sudo service nginx restart`
+
+```
+server {
+  listen *:80;
+  server_name api.npms.io;
+
+  location /v2/ {
+    # Allow CORS
+    set $acac true;
+    if ($http_origin = '') {
+      set $acac false;
+      set $http_origin '*';
+    }
+
+    if ($request_method = 'OPTIONS') {
+      add_header 'Access-Control-Allow-Origin' $http_origin always;
+      add_header 'Access-Control-Allow-Credentials' $acac always;
+      add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS' always;
+      add_header 'Access-Control-Allow-Headers' 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type' always;
+      add_header 'Vary' 'Origin';
+
+      add_header 'Access-Control-Max-Age' 1728000;
+      add_header 'Content-Type' 'text/plain; charset=UTF-8';
+      add_header 'Content-Length' 0;
+
+      return 204;
+    }
+
+    if ($request_method = 'POST') {
+      add_header 'Access-Control-Allow-Origin' $http_origin always;
+      add_header 'Access-Control-Allow-Credentials' $acac always;
+      add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS' always;
+      add_header 'Access-Control-Allow-Headers' 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type' always;
+      add_header 'Vary' 'Origin';
+    }
+
+    if ($request_method = 'GET') {
+      add_header 'Access-Control-Allow-Origin' $http_origin always;
+      add_header 'Access-Control-Allow-Credentials' $acac always;
+      add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS' always;
+      add_header 'Access-Control-Allow-Headers' 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type' always;
+      add_header 'Vary' 'Origin';
+    }
+
+    # Proxy to our backend
+    rewrite ^ $request_uri;
+    rewrite ^/v2/(.*) $1 break;
+    return 400;
+    proxy_pass http://127.0.0.1:3000/$uri;
+
+    # Do not buffer, improves performance
+    proxy_buffering    off;
+    proxy_buffer_size  128k;
+    proxy_buffers 100  128k;
+
+    # Fix some headers
+    proxy_set_header  X-Real-IP  $remote_addr;
+    proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header  Host $http_host;
+  }
+
+  # Unversioned requests point to latest api
+  location / {
+    return 302 $scheme://api.npms.io/v2$request_uri;
+  }
+}
+```
 
 ## Deploying
 
