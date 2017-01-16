@@ -21,7 +21,7 @@ Before doing the first deploy, you need to setup the server. All commands execut
 
 - Install nginx in the server by running `$ sudo aptitude install nginx`
 - Setup a new site called `api` in `/etc/nginx/sites-available` with the config exemplified below
-- Finally restart nginx by running `$ sudo service nginx restart`
+- Enable this site and finally restart nginx by running `$ sudo service nginx restart`
 
 ```
 server {
@@ -67,6 +67,7 @@ server {
     }
 
     # Proxy to our backend
+    # Need to do this ugly rewrite trickery so that url encoded parameters are left untouched
     rewrite ^ $request_uri;
     rewrite ^/v2/(.*) $1 break;
     return 400;
