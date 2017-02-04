@@ -4,6 +4,7 @@
         {
             name: 'npms-api',
             script: './server.js',
+            args: [],
             instances: 3,
             env : { NODE_ENV: 'production' },
             max_memory_restart: '1500M'
