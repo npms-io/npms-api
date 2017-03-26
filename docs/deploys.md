@@ -69,9 +69,9 @@ server {
     # Proxy to our backend
     # Need to do this ugly rewrite trickery so that url encoded parameters are left untouched
     rewrite ^ $request_uri;
-    rewrite ^/v2/(.*) $1 break;
+    rewrite ^/v2/(.*) /$1 break;
     return 400;
-    proxy_pass http://127.0.0.1:3000/$uri;
+    proxy_pass http://127.0.0.1:3000$uri;
 
     # Do not buffer, improves performance
     proxy_buffering    off;
