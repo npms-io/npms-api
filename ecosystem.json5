@@ -9,7 +9,6 @@
             env : { NODE_ENV: 'production' },
             max_memory_restart: '2018M',  // Restart if it's getting close to the limit
             node_args: '--max_old_space_size=2048',
-            pmx: false,  // We were experiecing PMX has a lot of memory leaks, see: https://github.com/keymetrics/pmx/issues/23
         },
     ],
     deploy: {
