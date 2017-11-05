@@ -49,9 +49,6 @@
     "validate-npm-package-name": "^3.0.0",
     "yargs": "^7.0.0"
   },
-  "engines": {
-    "node": ">=4.0.0"
-  },
   "bin": {
     "npms-api": "./server.js"
   },
