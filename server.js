@@ -7,7 +7,6 @@ const assert = require('assert');
 const config = require('config');
 
 const argv = yargs
-.strict()
 .wrap(Math.min(120, yargs.terminalWidth()))
 .version().alias('version', 'v')
 .help('help').alias('help', 'h')
