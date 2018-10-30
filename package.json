@@ -31,34 +31,34 @@
   "author": "André Duarte <hi@andreduarte.io> (http://andreduarte.io)",
   "license": "MIT",
   "dependencies": {
-    "@npms/queries": "^1.0.1",
-    "bluebird": "^3.3.4",
-    "config": "^1.19.0",
-    "elasticsearch": "^12.0.1",
-    "joi": "^10.0.0",
+    "@npms/queries": "^3.0.0",
+    "bluebird": "^3.5.2",
+    "config": "^2.0.1",
+    "elasticsearch": "^15.2.0",
+    "joi": "^14.0.2",
     "koa": "^1.2.0",
     "koa-bodyparser": "^2.2.0",
     "koa-ga-pageview": "^1.0.0",
     "koa-pino-logger": "^1.0.2",
     "koa-response-time": "^1.0.2",
     "koa-router": "^5.4.0",
-    "lodash": "^4.12.0",
-    "nano": "^6.2.0",
-    "pino": "^4.0.0",
+    "lodash": "^4.17.11",
+    "nano": "^7.1.0",
+    "pino": "^5.8.0",
     "require-directory": "^2.1.1",
     "validate-npm-package-name": "^3.0.0",
-    "yargs": "^7.0.0"
+    "yargs": "^12.0.2"
   },
   "bin": {
     "npms-api": "./server.js"
   },
   "devDependencies": {
-    "@satazor/eslint-config": "^3.0.0",
     "apidoc": "^0.17.1",
-    "coveralls": "^2.11.6",
-    "eslint": "^3.0.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.8.0",
+    "eslint-config-moxy": "^3.2.0",
     "istanbul": "^0.4.2",
-    "mocha": "^3.0.1",
-    "nodemon": "^1.9.1"
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.5"
   }
 }
