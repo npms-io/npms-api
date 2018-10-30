@@ -1,6 +1,6 @@
 # npms-api
 
-[![Build status][travis-image]][travis-url] [![Coverage status][coveralls-image]][coveralls-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev dependency status][david-dm-dev-image]][david-dm-dev-url]
+[![Build status][travis-image]][travis-url] [![Coverage status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev dependency status][david-dm-dev-image]][david-dm-dev-url]
 
 The https://npms.io API.
 
@@ -41,8 +41,8 @@ $ npm test-cov # to get coverage report
 Released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
 
 
-[coveralls-image]: https://img.shields.io/coveralls/npms-io/npms-api/master.svg
-[coveralls-url]: https://coveralls.io/r/npms-io/npms-api
+[codecov-url]:https://codecov.io/gh/npms-io/npms-api
+[codecov-image]:https://img.shields.io/codecov/c/github/npms-io/npms-api/master.svg
 [david-dm-dev-image]: https://img.shields.io/david/dev/npms-io/npms-api.svg
 [david-dm-dev-url]: https://david-dm.org/npms-io/npms-api#info=devDependencies
 [david-dm-image]: https://img.shields.io/david/npms-io/npms-api.svg

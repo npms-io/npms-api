@@ -10,8 +10,8 @@
     "docs": "scripts/generate-doc",
     "docs-push": "scripts/generate-doc --push",
     "test": "mocha",
-    "test-cov": "istanbul cover --dir test/coverage _mocha -- --bail && echo Coverage lies in test/coverage/lcov-report/index.html",
-    "test-travis": "istanbul cover _mocha --report lcovonly -- --bail && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "test-cov": "istanbul cover --dir test/coverage _mocha && echo Coverage lies in test/coverage/lcov-report/index.html",
+    "test-travis": "istanbul cover _mocha --report lcovonly"
   },
   "bugs": "https://github.com/npms-io/npms-api/issues/",
   "repository": {
