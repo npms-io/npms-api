@@ -30,6 +30,9 @@
   ],
   "author": "André Duarte <hi@andreduarte.io> (http://andreduarte.io)",
   "license": "MIT",
+  "bin": {
+    "npms-api": "./server.js"
+  },
   "dependencies": {
     "@npms/queries": "^3.0.0",
     "bluebird": "^3.5.2",
@@ -49,16 +52,34 @@
     "validate-npm-package-name": "^3.0.0",
     "yargs": "^12.0.2"
   },
-  "bin": {
-    "npms-api": "./server.js"
-  },
   "devDependencies": {
+    "@commitlint/cli": "^7.1.2",
+    "@commitlint/config-conventional": "^7.1.2",
     "apidoc": "^0.17.1",
     "coveralls": "^3.0.2",
     "eslint": "^5.8.0",
     "eslint-config-moxy": "^6.1.1",
+    "husky": "^1.1.2",
     "istanbul": "^0.4.2",
+    "lint-staged": "^8.0.4",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
