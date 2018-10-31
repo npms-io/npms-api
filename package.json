@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "start-dev": "nodemon --watch server.js --watch index.js --watch lib --watch config --ext js,json5 server.js --log-level debug",
-    "lint": "eslint --ignore-path .gitignore '{*.js,lib/**/*.js,test/**/*.js}'",
+    "lint": "eslint . --ignore-path .gitignore",
     "docs": "scripts/generate-doc",
     "docs-push": "scripts/generate-doc --push",
     "test": "mocha",
